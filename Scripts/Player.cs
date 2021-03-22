@@ -49,6 +49,7 @@ public class Player : MonoBehaviour
             isAlive = false;
             myAnimator.SetTrigger("dying");
             myRigidBody.velocity = dethkick;
+            FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
     private void ClimbLadder()
